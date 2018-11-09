@@ -1,0 +1,197 @@
+> colnames(br) <-  c("PIB","Emprego","Câmbio")   #Renomeia as colunas para PIB, Trabalho e Câmbio
+> BR <- br[45:62,1:3]
+> PIB <- diff(br$PIB)                    #Cria o vetor para variável PIB 
+> PIb <- ts(PIB, start = 1950, frequency = 1)
+> EMPREGO <- diff(br$Emprego)            #Cria o vetor para variável EMPREGO
+> Emprego <- ts(EMPREGO, start = 1950, frequency = 1)
+> CAMBIO <- diff(br$C�mbio)              #Cria o vetor para variável CAMBIO
+> Cambio <- ts(CAMBIO, start = 1950, frequency = 1)
+Error in ts(CAMBIO, start = 1950, frequency = 1) : 
+  'ts' object must have one or more observations
+> Brasil <- cbind(PIB,EMPREGO,CAMBIO)
+> Anos <- seq(from=1950, to=2011, by=1)         #Cria um vetor para o tempo em anos de 1994 até 2011
+> BRA <- ts(Brasil, start = 1950, frequency = 1)
+> plot(BRA,main="Variação do PIB, Emprego e Cambio no Brasil", col="Blue")
+> h1 = hchart(PIb, name = "PIB", color = "#B71C1C")
+>   hc_title(h1,text = "Variação do PIB do Brasil", margin = 10, style = list(fontSize= "14px")) #Gráfico do PIB
+> 
+> h2 = hchart(Emprego, name = "EMPREGO", color = "black")
+>   hc_title(h2,text = "Variação do Emprego", margin = 10, style = list(fontSize= "14px")) #Gráfico do Emprego
+> 
+> h3 = hchart(Cambio, name = "Cambio", color = "green")
+Error in hchart(Cambio, name = "Cambio", color = "green") : 
+  object 'Cambio' not found
+>   hc_title(h3,text = "Variação do Câmbio (R$/U$$)", margin = 10, style = list(fontSize= "14px")) #Gráfico do Câmbio
+Error: is.highchart(x = hc) is not TRUE
+> 
+> lst = list(h1,h2,h3)
+> hw_grid(lst, ncol = 2, rowheight = 400)  %>% browsable()
+Error in hw_grid(lst, ncol = 2, rowheight = 400) : 
+  All parameters must be htmlwidget objects
+> #Separando as variáveis
+> PIB <- diff(br$PIB)                    #Cria o vetor para variável PIB 
+> PIb <- ts(PIB, start = 1950, frequency = 1)
+> EMPREGO <- diff(br$Emprego)            #Cria o vetor para variável EMPREGO
+> Emprego <- ts(EMPREGO, start = 1950, frequency = 1)
+> CAMBIO <- diff(br$C�mbio)              #Cria o vetor para variável CAMBIO
+> Cambio <- ts(CAMBIO, start = 1950, frequency = 1)
+Error in ts(CAMBIO, start = 1950, frequency = 1) : 
+  'ts' object must have one or more observations
+> Brasil <- cbind(PIB,EMPREGO,CAMBIO)
+> Anos <- seq(from=1950, to=2011, by=1)         #Cria um vetor para o tempo em anos de 1994 até 2011
+> BRA <- ts(Brasil, start = 1950, frequency = 1)
+> plot(BRA,main="Variação do PIB, Emprego e Cambio no Brasil", col="Blue")
+> h1 = hchart(PIb, name = "PIB", color = "#B71C1C")
+>   hc_title(h1,text = "Variação do PIB do Brasil",  style = list(fontSize= "14px")) #Gráfico do PIB
+> h1 = hchart(PIb, name = "PIB", color = "#B71C1C")
+>   hc_title(h1,text = "Variacao do PIB do Brasil",  style = list(fontSize= "14px")) #Gráfico do PIB
+> 
+> h2 = hchart(Emprego, name = "EMPREGO", color = "black")
+>   hc_title(h2,text = "Varicao do Emprego", margin = 10, style = list(fontSize= "14px")) #Gráfico do Emprego
+> 
+> h3 = hchart(Cambio, name = "Cambio", color = "green")
+Error in hchart(Cambio, name = "Cambio", color = "green") : 
+  object 'Cambio' not found
+>   hc_title(h3,text = "Variacao do Cambio (R$/U$$)", margin = 10, style = list(fontSize= "14px")) #Gráfico do Câmbio
+Error: is.highchart(x = hc) is not TRUE
+> 
+> lst = list(h1,h2,h3)
+> hw_grid(lst, ncol = 2, rowheight = 400)  %>% browsable()  #Todos Três Gráficos Juntos
+Error in hw_grid(lst, ncol = 2, rowheight = 400) : 
+  All parameters must be htmlwidget objects
+> br <- subset(pwt8.0, country=="Brazil", 
++              select = c("rgdpna","emp","xr"))  #Cria a tabela "br" com dados das linhas que assumem o valor "country" (pa�???s) igual a "Brazil", selecionando as colunas cujas variáveis são "rgdpna" (PIB), "avh" (TRABALHO)  e "xr" (CÂMBIO)
+> 
+> colnames(br) <-  c("PIB","Emprego","Cambio")   #Renomeia as colunas para PIB, Trabalho e Câmbio
+> BR <- br[45:62,1:3]
+> PIB <- diff(br$PIB)                    #Cria o vetor para variável PIB 
+> PIb <- ts(PIB, start = 1950, frequency = 1)
+> EMPREGO <- diff(br$Emprego)            #Cria o vetor para variável EMPREGO
+> Emprego <- ts(EMPREGO, start = 1950, frequency = 1)
+> CAMBIO <- diff(br$C�mbio)              #Cria o vetor para variável CAMBIO
+> Cambio <- ts(CAMBIO, start = 1950, frequency = 1)
+Error in ts(CAMBIO, start = 1950, frequency = 1) : 
+  'ts' object must have one or more observations
+> Brasil <- cbind(PIB,EMPREGO,CAMBIO)
+> Anos <- seq(from=1950, to=2011, by=1)         #Cria um vetor para o tempo em anos de 1994 até 2011
+> BRA <- ts(Brasil, start = 1950, frequency = 1)
+> plot(BRA,main="Variação do PIB, Emprego e Cambio no Brasil", col="Blue")
+> br <- subset(pwt8.0, country=="Brazil", 
++              select = c("rgdpna","emp","xr"))  #Cria a tabela "br" com dados das linhas que assumem o valor "country" (pa�???s) igual a "Brazil", selecionando as colunas cujas variáveis são "rgdpna" (PIB), "avh" (TRABALHO)  e "xr" (CÂMBIO)
+> 
+> colnames(br) <-  c("PIB","Emprego","Cambio")   #Renomeia as colunas para PIB, Trabalho e Câmbio
+> BR <- br[45:62,1:3]
+> 
+> 
+> #Separando as variáveis
+> PIB <- diff(br$PIB)                    #Cria o vetor para variável PIB 
+> PIb <- ts(PIB, start = 1950, frequency = 1)
+> EMPREGO <- diff(br$Emprego)            #Cria o vetor para variável EMPREGO
+> Emprego <- ts(EMPREGO, start = 1950, frequency = 1)
+> CAMBIO <- diff(br$Cambio)              #Cria o vetor para variável CAMBIO
+> Cambio <- ts(CAMBIO, start = 1950, frequency = 1)
+> Brasil <- cbind(PIB,EMPREGO,CAMBIO)
+> Anos <- seq(from=1950, to=2011, by=1)         #Cria um vetor para o tempo em anos de 1994 até 2011
+> BRA <- ts(Brasil, start = 1950, frequency = 1)
+> plot(BRA,main="Variação do PIB, Emprego e Cambio no Brasil", col="Blue")
+> h1 = hchart(PIb, name = "PIB", color = "#B71C1C")
+>   hc_title(h1,text = "Variacao do PIB do Brasil",  style = list(fontSize= "14px")) #Gráfico do PIB
+> 
+> h2 = hchart(Emprego, name = "EMPREGO", color = "black")
+>   hc_title(h2,text = "Varicao do Emprego", margin = 10, style = list(fontSize= "14px")) #Gráfico do Emprego
+> 
+> h3 = hchart(Cambio, name = "Cambio", color = "green")
+>   hc_title(h3,text = "Variacao do Cambio (R$/U$$)", margin = 10, style = list(fontSize= "14px")) #Gráfico do Câmbio
+> 
+> lst = list(h1,h2,h3)
+> hw_grid(lst, ncol = 2, rowheight = 400)  %>% browsable()  #Todos Três Gráficos Juntos
+> 
+> #Lag òtimo
+> CriterioInformacao = vars::VARselect(y = Brasil, lag.max = 6, type = "const")
+> print(CriterioInformacao$criteria)
+                  1            2            3            4            5            6
+AIC(n) 1.776620e+01 1.789226e+01 1.801891e+01 1.819666e+01 1.804561e+01 1.820731e+01
+HQ(n)  1.793556e+01 1.818864e+01 1.844232e+01 1.874709e+01 1.872306e+01 1.901178e+01
+SC(n)  1.820416e+01 1.865869e+01 1.911382e+01 1.962004e+01 1.979746e+01 2.028763e+01
+FPE(n) 5.201132e+07 5.919931e+07 6.773918e+07 8.214438e+07 7.238479e+07 8.829698e+07
+> modelobra = vars::VAR(y = Brasil, p = 1, type = "const")
+> summary(modelobra)
+
+VAR Estimation Results:
+========================= 
+Endogenous variables: PIB, EMPREGO, CAMBIO 
+Deterministic variables: const 
+Sample size: 60 
+Log Likelihood: -768.821 
+Roots of the characteristic polynomial:
+0.4177 0.2463 0.1125
+Call:
+vars::VAR(y = Brasil, p = 1, type = "const")
+
+
+Estimation results for equation PIB: 
+==================================== 
+PIB = PIB.l1 + EMPREGO.l1 + CAMBIO.l1 + const 
+
+            Estimate Std. Error t value Pr(>|t|)   
+PIB.l1     2.277e-01  1.413e-01   1.611  0.11280   
+EMPREGO.l1 8.243e+02  3.017e+03   0.273  0.78570   
+CAMBIO.l1  6.057e+03  2.101e+04   0.288  0.77416   
+const      2.029e+04  5.913e+03   3.432  0.00113 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+
+Residual standard error: 28580 on 56 degrees of freedom
+Multiple R-Squared: 0.0571,	Adjusted R-squared: 0.006591 
+F-statistic:  1.13 on 3 and 56 DF,  p-value: 0.3446 
+
+
+Estimation results for equation EMPREGO: 
+======================================== 
+EMPREGO = PIB.l1 + EMPREGO.l1 + CAMBIO.l1 + const 
+
+            Estimate Std. Error t value Pr(>|t|)    
+PIB.l1     3.994e-06  6.625e-06   0.603 0.549062    
+EMPREGO.l1 1.130e-01  1.414e-01   0.799 0.427794    
+CAMBIO.l1  9.913e-01  9.848e-01   1.007 0.318430    
+const      1.047e+00  2.772e-01   3.778 0.000385 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+
+Residual standard error: 1.34 on 56 degrees of freedom
+Multiple R-Squared: 0.03592,	Adjusted R-squared: -0.01572 
+F-statistic: 0.6955 on 3 and 56 DF,  p-value: 0.5587 
+
+
+Estimation results for equation CAMBIO: 
+======================================= 
+CAMBIO = PIB.l1 + EMPREGO.l1 + CAMBIO.l1 + const 
+
+             Estimate Std. Error t value Pr(>|t|)    
+PIB.l1      3.230e-07  8.331e-07   0.388 0.699724    
+EMPREGO.l1 -8.729e-03  1.779e-02  -0.491 0.625523    
+CAMBIO.l1   4.359e-01  1.238e-01   3.520 0.000866 ***
+const       1.781e-02  3.486e-02   0.511 0.611526    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+
+Residual standard error: 0.1685 on 56 degrees of freedom
+Multiple R-Squared: 0.1923,	Adjusted R-squared: 0.149 
+F-statistic: 4.444 on 3 and 56 DF,  p-value: 0.007172 
+
+
+
+Covariance matrix of residuals:
+              PIB    EMPREGO     CAMBIO
+PIB     816638891  1.341e+04 -1.222e+03
+EMPREGO     13414  1.795e+00 -5.232e-02
+CAMBIO      -1222 -5.232e-02  2.838e-02
+
+Correlation matrix of residuals:
+            PIB EMPREGO  CAMBIO
+PIB      1.0000  0.3504 -0.2539
+EMPREGO  0.3504  1.0000 -0.2318
+CAMBIO  -0.2539 -0.2318  1.0000
